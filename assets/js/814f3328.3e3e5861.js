@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkSOVD=self.webpackChunkSOVD||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"WTF SOVD?","permalink":"/SOVD/blog/welcome","unlisted":false,"date":"2025-01-03T00:00:00.000Z"}]}')}}]);

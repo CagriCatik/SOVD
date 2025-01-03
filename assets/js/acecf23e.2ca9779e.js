@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkSOVD=self.webpackChunkSOVD||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/SOVD/blog","blogTitle":"Blog","authorsListPath":"/SOVD/blog/authors"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkSOVD=self.webpackChunkSOVD||[]).push([[9368],{3207:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/SOVD/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
