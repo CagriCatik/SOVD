@@ -4,42 +4,42 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Comprehensive Diagnostics',
-    Svg: require('@site/static/img/diagnostic-svgrepo-com.svg').default,
+    title: 'Modern Diagnostics API',
+    // Svg: require('@site/static/img/undraw_server_cluster.svg').default,
     description: (
       <>
-        SOVD provides an extensive suite of diagnostic tools for modern vehicles,
-        ensuring accurate troubleshooting and maintenance.
+        The SOVD API leverages modern web technologies like REST, JSON, and HTTP2,
+        ensuring robust and scalable diagnostics for traditional ECUs and HPCs.
       </>
     ),
   },
   {
-    title: 'Seamless Integration',
-    Svg: require('@site/static/img/integration-svgrepo-com.svg').default,
+    title: 'Unified Interface',
+    // Svg: require('@site/static/img/undraw_sync.svg').default,
     description: (
       <>
-        Designed to work with various platforms and protocols, SoVD integrates
-        effortlessly into your vehicle's ecosystem.
+        SOVD integrates seamlessly with UDS-based systems and provides a consistent
+        interface for diagnostic access across proximity, in-vehicle, and remote scenarios.
       </>
     ),
   },
   {
-    title: 'Real-Time Monitoring',
-    Svg: require('@site/static/img/monitoring-svgrepo-com.svg').default,
+    title: 'Dynamic & Self-Descriptive',
+    // Svg: require('@site/static/img/undraw_self_driving.svg').default,
     description: (
       <>
-        Monitor vehicle performance and diagnostics in real-time with
-        intuitive interfaces and precise data streams.
+        SOVD is designed for dynamic systems with self-descriptive capabilities, eliminating
+        the need for static diagnostic descriptions like ODX files.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {Svg && <Svg className={styles.featureSvg} role="img" />}
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -53,36 +53,12 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        {/* Features Section */}
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
-
-        {/* Why Choose SOVD Section */}
-        <div className={styles.newSection}>
-          <h2 className="text--center">Why Choose SOVD?</h2>
-          <p className={`${styles.newSectionDescription} text--center`}>
-            SOVD is your trusted partner in modern vehicle diagnostics. With state-of-the-art tools, seamless integration, and reliable performance, we ensure your vehicle operates at its best.
-          </p>
-          <div className={`row ${styles.newSectionFeatures}`}>
-            <div className="col col--6">
-              <h3>Cutting-Edge Technology</h3>
-              <p>
-                Leverage the power of advanced diagnostics tools that make identifying and resolving issues fast and efficient.
-              </p>
-            </div>
-            <div className="col col--6">
-              <h3>Trusted by Professionals</h3>
-              <p>
-                SOVD is widely adopted by industry leaders, ensuring compatibility with the latest standards and platforms.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
 }
-

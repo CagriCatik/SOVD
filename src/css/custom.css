@@ -1,141 +1,42 @@
 /**
- * Global CSS for the Docusaurus site.
- * Includes dark mode compatibility and responsive adjustments.
+ * Unified color theme based on the logo's red color.
  */
 
-/* Light mode variables */
-:root {
-  --ifm-color-primary: #FF0000; /* Primary red */
-  --ifm-color-primary-dark: #CC0000; /* Darker red */
-  --ifm-color-primary-darker: #AA0000; /* Even darker red */
-  --ifm-color-primary-darkest: #880000; /* Darkest red */
+ :root {
+  /* Primary color adjustments to match the logo's red */
+  --ifm-color-primary: #FF0000; /* Bright red (logo base color) */
+  --ifm-color-primary-dark: #CC0000; /* Darker shade of red */
+  --ifm-color-primary-darker: #990000; /* Even darker shade */
+  --ifm-color-primary-darkest: #660000; /* Deep dark red */
   --ifm-color-primary-light: #FF3333; /* Lighter red */
-  --ifm-color-primary-lighter: #FF6666; /* Even lighter red */
-  --ifm-color-primary-lightest: #FF9999; /* Lightest red */
+  --ifm-color-primary-lighter: #FF6666; /* Softer red */
+  --ifm-color-primary-lightest: #FF9999; /* Very light red */
+  --ifm-footer-background-color: #FF0000; /* Bright red (logo base color) */
+  --ifm-footer-text-color: #FFFFFF; /* White for contrast */
+  --ifm-footer-link-color: #FFFFFF; /* White links */
+  --ifm-footer-link-hover-color: #FFCCCC; /* Light red hover color */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(255, 0, 0, 0.1); /* Highlight line with red tint */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 0, 0, 0.1); /* Faint red highlight */
 }
 
-/* Dark mode variables */
+
+/* Dark mode adjustments for readability */
 [data-theme='dark'] {
-  --ifm-color-primary: #FF4444; /* Bright red for dark mode */
-  --ifm-color-primary-dark: #CC3333; /* Darker red */
-  --ifm-color-primary-darker: #AA2929; /* Even darker red */
-  --ifm-color-primary-darkest: #882121; /* Darkest red */
-  --ifm-color-primary-light: #FF5555; /* Lighter red for dark mode */
-  --ifm-color-primary-lighter: #FF7777; /* Even lighter red */
-  --ifm-color-primary-lightest: #FFBBBB; /* Lightest red */
-  --docusaurus-highlighted-code-line-bg: rgba(255, 0, 0, 0.3); /* Highlight line with red tint */
+  --ifm-color-primary: #FF4D4D; /* Slightly muted red for dark mode */
+  --ifm-color-primary-dark: #CC3939; /* Darker muted red */
+  --ifm-color-primary-darker: #993131; /* Deep muted red */
+  --ifm-color-primary-darkest: #662121; /* Very deep muted red */
+  --ifm-color-primary-light: #FF6666; /* Softer red */
+  --ifm-color-primary-lighter: #FF8080; /* Light muted red */
+  --ifm-color-primary-lightest: #FFB3B3; /* Very light muted red */
+  --ifm-footer-background-color: #CC3939; /* Dark muted red for dark mode */
+  --ifm-footer-text-color: #FFFFFF; /* Keep text white for dark mode */
+  --ifm-footer-link-color: #FFFFFF; /* White links */
+  --ifm-footer-link-hover-color: #FF9999; /* Softer red for hover in dark mode */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 77, 77, 0.3); /* Faint red highlight for dark mode */
 }
 
-/* Unified Footer Styling */
-
-/* Footer background and text */
-.footer {
-  background-color: var(--ifm-color-primary-dark); /* Dark red background */
-  color: #ffffff; /* White text for high contrast */
-  padding: 20px;
-  text-align: center;
-}
-
-/* Footer links */
-.footer a {
-  color: #ffffff; /* White links for readability */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.footer a:hover {
-  color: #ffcccc; /* Light pink for hover effect */
-  text-decoration: underline;
-}
-
-/* Footer headings */
-.footer__title {
-  color: #ffffff; /* White for headings */
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* Footer buttons */
-.footer button {
-  background-color: var(--ifm-color-primary);
-  color: #fff; /* High contrast for text */
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out; /* Smooth hover transition */
-}
-
-.footer button:hover {
-  background-color: var(--ifm-color-primary-darker);
-}
-
-/* General Responsiveness */
-
-/* Ensure the layout works well on small screens */
-@media (max-width: 768px) {
-  .footer {
-    padding: 15px;
-    text-align: left; /* Align to the left for smaller screens */
-  }
-
-  .footer__links {
-    display: block; /* Stack links vertically */
-    margin-bottom: 10px;
-  }
-
-  .footer__title {
-    margin-bottom: 5px;
-  }
-}
-
-/* Code Blocks */
-
-/* Adjust code block font size and highlight in both light and dark modes */
-pre, code {
-  font-size: var(--ifm-code-font-size);
-  background: var(--docusaurus-highlighted-code-line-bg);
-  padding: 10px;
-  border-radius: 5px;
-  overflow-x: auto; /* Prevent horizontal overflow */
-}
-
-/* Header Responsiveness */
-
-.navbar {
-  padding: 10px 20px;
-}
-
-.navbar__inner {
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  justify-content: space-between;
-}
-
-@media (max-width: 768px) {
-  .navbar__items {
-    display: block; /* Stack navigation items vertically */
-    margin: 10px 0;
-  }
-
-  .navbar__logo {
-    margin-bottom: 10px;
-  }
-}
-
-/* Miscellaneous Enhancements */
-
-/* Button consistency across the site */
-button {
-  background-color: var(--ifm-color-primary);
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--ifm-color-primary-dark);
+footer[data-theme='dark'] {
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-footer-text-color);
 }

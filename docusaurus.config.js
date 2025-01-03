@@ -10,7 +10,7 @@ const config = {
   tagline: 'Bring your Knowledge to another level',
   favicon: 'img/favicon.ico',
 
-  url: 'https://your-github-username.github.io',
+  url: 'https://CagriCatik.github.io',
   baseUrl: '/SOVD/',
 
   organizationName: 'CagriCatik',
@@ -66,6 +66,18 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'simulationSidebar',
+            position: 'left',
+            label: 'Simulation',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'apiSidebar',
+            position: 'left',
+            label: 'Diagnostic API',
+          },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/CagriCatik/SOVD',
@@ -75,14 +87,13 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documentation',
             items: [
               {
-                label: 'Documentation',
-                to: '/docs/getting-started',
+                label: 'Knowledge Base',
+                to: '/docs/category/introduction-to-sovd',
               },
             ],
           },
@@ -101,7 +112,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} SOVD, Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} SOVD`,
       },
       prism: {
         theme: prismThemes.github,
